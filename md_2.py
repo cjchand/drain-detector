@@ -42,14 +42,14 @@ while True:
     frame = vs.read()
     frame = frame if args.get("video", None) is None else frame[1]
     text = "Unoccupied"
-    timestamp = datetime.datetime.now()
+    timestamp = vs.get(cv2.CAP_PROP_POS_MSEC)
 
     # if the frame could not be grabbed, then we have reached the end
     # of the video
     if frame is None:
         break
-    
-    # print(type(frame))
+    if timestamp % 10000 == 0:
+        print('{} seconds processed so far...'.format(int(timestamp/1000)))
     frame = imutils.resize(frame, width=1000)
     if conf['zoom']:
         frame = frame[conf['y_top']:conf['y_bottom'], conf['x_left']:conf['x_right']]
