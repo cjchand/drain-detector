@@ -26,3 +26,7 @@ In order to use this code, you need to do the following:
 9. `ctrl-c` in the terminal where you ran Step 5 to stop the processing
 10. Re-run  `python --conf conf.json --video /path/to/your/video`. You will see just the rectangle you chose before. Repeat the steps above as needed to tweak the detection zone.
 11. When you let the script run to completion, it will save the clips in the `./clips` directory
+
+# Two Great Tastes...
+
+If your target videos are on Twitch, I *highly* recommend using [`twitch-dl`](https://github.com/ihabunek/twitch-dl). Super easy - and performant - way to download any stream.
