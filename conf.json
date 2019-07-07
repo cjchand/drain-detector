@@ -1,13 +1,14 @@
 {
 	"show_video": true,
+	"zoom": true,
 	"min_upload_seconds": 3.0,
 	"min_motion_frames": 8,
 	"camera_warmup_time": 2.5,
 	"delta_thresh": 5,
 	"fps": 30,
-    "min_area": 50,
-    "x_left": 205,
-    "x_right": 275,
-    "y_top": 770,
-    "y_bottom": 815
+    "min_area": 250,
+    "x_left": 800,
+    "x_right": 870,
+    "y_top": 500,
+    "y_bottom": 550
 }

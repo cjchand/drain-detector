@@ -50,8 +50,9 @@ while True:
         break
     
     # print(type(frame))
-    frame = imutils.resize(frame, width=500)
-    frame = frame[770:815, 205:275]
+    frame = imutils.resize(frame, width=1000)
+    if conf['zoom']:
+        frame = frame[conf['y_top']:conf['y_bottom'], conf['x_left']:conf['x_right']]
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     gray = cv2.GaussianBlur(gray, (21, 21), 0)
 
