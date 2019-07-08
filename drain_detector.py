@@ -109,7 +109,7 @@ for i in range(1, len(drain_times), 1):
     # Times are in milliseconds
     drain_time = drain_times[i]/1000
     # Start the clip 10 seconds prior to the drain
-    start_clip = drain_time - 10
+    start_clip = drain_time - conf['scrollback_time']
     # End the clip 3 seconds after the drain
     end_clip = drain_time + 3
     print('Writing video file. Drain time: {}, Start clip: {}, End clip: {}'.format(drain_time, start_clip, end_clip))
