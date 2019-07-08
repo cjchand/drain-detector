@@ -27,6 +27,16 @@ In order to use this code, you need to do the following:
 10. Re-run  `python --conf conf.json --video /path/to/your/video`. You will see just the rectangle you chose before. Repeat the steps above as needed to tweak the detection zone.
 11. When you let the script run to completion, it will save the clips in the `./clips` directory
 
+# Configuration
+
+As mentioned above, there is a file named `conf.json` that controls how the script behaves. Here are some of the more interesting bits:
+
+1. `scrollback_time` (int): The number of seconds before a drain to start the clip.
+2. `x\_left`, `x\_right`, `y\_top`, 'y\_bottom` (int): Coordinates for the detection zone.
+2. `zoom` (boolean): Whether to zoom in on the detection zone. You need to set this to `true` once you have your detection zone determined, else any change in the video (including any insert lighting up) will trigger a detection.
+4. `min\_area`: The minimum area - in pixels - of movement required before determining the motion is worthwhile (e.g.: a 10x10 pixel object would need `min\_area` set to somewhere close to `100`). This helps prevent things like reflections of lights from falsely triggering detection.
+4. `show\_video` (boolean): Whether to show the video while processing.
+
 # Two Great Tastes...
 
 If your target videos are on Twitch, I *highly* recommend using [`twitch-dl`](https://github.com/ihabunek/twitch-dl). Super easy - and performant - way to download any stream.
