@@ -1,12 +1,12 @@
 {
     "show_video": true,
-    "zoom": false,
+    "zoom": true,
     "camera_warmup_time": 2.5,
     "scrollback_time": 5,
     "delta_thresh": 5,
-    "min_area": 250,
-    "x_left": 800,
-    "x_right": 870,
-    "y_top": 505,
-    "y_bottom": 550
+    "min_area": 500,
+    "x_left": 870,
+    "x_right": 930,
+    "y_top": 215,
+    "y_bottom": 340
 }
