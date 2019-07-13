@@ -1,4 +1,4 @@
 .DS_Store
-./clips/*.mp4
+clips/*.mp4
 **/*.pyc
 
