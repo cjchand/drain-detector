@@ -114,4 +114,4 @@ for i in range(1, len(drain_times), 1):
     end_clip = drain_time + 3
     print('Writing video file. Drain time: {}, Start clip: {}, End clip: {}'.format(drain_time, start_clip, end_clip))
     clip = VideoFileClip(args['video']).subclip(start_clip, end_clip)
-    clip.write_videofile('./clips/drain_{}.mp4'.format(str(drain_time)))
+    clip.write_videofile('./clips/drain_{}.mp4'.format(str(int(drain_time))))
